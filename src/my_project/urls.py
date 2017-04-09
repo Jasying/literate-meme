@@ -21,7 +21,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'^posts/', include('posts.urls')),
+    url(r'^posts/', include("posts.urls", namespace='posts')),
     #url(string,include())
     #r represents string
     # ^ means if you match up to this point then you can look for posts

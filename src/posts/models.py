@@ -11,3 +11,9 @@ class Post(models.Model):
 
 	def __unicode__(self):
 		return self.title
+
+	def __str__(self):
+		return self.title
+
+	def get_absolute_url(self):
+		return reverse("posts:detail", kwargs={"id": self.id})
